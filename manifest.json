@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "Wiki Image Popup",
+  "version": "1.0",
+  "description": "Search images related to the highlighted word.",
+
+  "permissions": [
+    "tabs", 
+    "*://*.wikipedia.org/*",
+    "contextMenus"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.wikipedia.org/*"
+      ],
+
+      "css": [
+        "bootstrap.min.css",
+        "bootstrap-theme.min.css"
+      ],
+
+      "js": [
+        "app.js",
+        "jquery-1.11.1.min.js",
+        "bootstrap.min.js"
+      ]
+    }
+  ],
+
+  "background": {
+    "persistent": false,
+    "scripts": ["right-click.js"]
+  }
+
+}
