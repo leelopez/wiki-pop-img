@@ -25,7 +25,7 @@ chrome.runtime.onMessage.addListener(
 			for (var i = 0; i < image.length; i++) {
 				var img = document.createElement('img');
 				img.src = this.constructImageURL_(image[i]);
-				img.setAttribute('alt', image[i].getAttribute('title'));
+				img.setAttribute('title', image[i].getAttribute('title'));
 				$('#myModalBody').append(img);
 			}
 		},
@@ -46,6 +46,7 @@ chrome.runtime.onMessage.addListener(
 		$('#myModal').modal('show');
 
 		$('#btn-close').click(function(){
-			$('#myModal').remove();		});
+			$('#myModal').remove();
+		});
 	}
 );

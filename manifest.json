@@ -18,7 +18,8 @@
 
       "css": [
         "bootstrap.min.css",
-        "bootstrap-theme.min.css"
+        "bootstrap-theme.min.css",
+        "app.css"
       ],
 
       "js": [
